@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LuckyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="luckyEat_bg5" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-7a-d4F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <viewLayoutGuide key="safeArea" id="CUu-Fr-YmM"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="fastfood" translatesAutoresizingMaskIntoConstraints="NO" id="DsF-Wz-ghO">
+                                <rect key="frame" x="0.0" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="noodle" translatesAutoresizingMaskIntoConstraints="NO" id="p70-St-lCf">
+                                <rect key="frame" x="0.0" y="90" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="rice" translatesAutoresizingMaskIntoConstraints="NO" id="sF6-v1-PDB">
+                                <rect key="frame" x="0.0" y="160" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S4-ct-Suj">
+                                <rect key="frame" x="114" y="554" width="147" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.17366608500707967" green="0.96498542746113991" blue="0.8794665400026479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Home"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lucky Eat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtN-3B-jzB">
+                                <rect key="frame" x="106" y="283" width="162" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="hamburger" destination="DsF-Wz-ghO" id="zcT-J9-64T"/>
+                        <outlet property="homebtn" destination="2S4-ct-Suj" id="2SL-cw-y2P"/>
+                        <outlet property="noodle" destination="p70-St-lCf" id="9Ls-Do-aS9"/>
+                        <outlet property="rice" destination="sF6-v1-PDB" id="SKa-Ov-YT0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="eeJ-hh-D36">
+            <objects>
+                <viewController storyboardIdentifier="Category" id="Gml-8G-UYt" customClass="Category" customModule="LuckyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YSq-hS-kZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CzU-VJ-sa9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="OWF-cF-ZAH" customClass="CategoryCell" customModule="LuckyEat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OWF-cF-ZAH" id="lkm-aq-wlO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT7-sf-XZE">
+                                                    <rect key="frame" x="166.5" y="39" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="50" verticalHuggingPriority="50" horizontalCompressionResistancePriority="50" verticalCompressionResistancePriority="50" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2j-x1-T5z">
+                                                    <rect key="frame" x="8" y="18" width="50" height="63"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="A2j-x1-T5z" secondAttribute="bottom" constant="10" id="10T-IV-IGK"/>
+                                                <constraint firstItem="AT7-sf-XZE" firstAttribute="centerX" secondItem="lkm-aq-wlO" secondAttribute="centerX" id="G3c-7L-eoY"/>
+                                                <constraint firstItem="A2j-x1-T5z" firstAttribute="top" secondItem="lkm-aq-wlO" secondAttribute="topMargin" constant="10" id="Pm3-dC-FUR"/>
+                                                <constraint firstItem="A2j-x1-T5z" firstAttribute="leading" secondItem="lkm-aq-wlO" secondAttribute="leadingMargin" constant="10" id="qBv-a3-IaK"/>
+                                                <constraint firstItem="A2j-x1-T5z" firstAttribute="centerY" secondItem="lkm-aq-wlO" secondAttribute="centerY" id="t5G-7F-Oxh"/>
+                                                <constraint firstItem="AT7-sf-XZE" firstAttribute="centerY" secondItem="lkm-aq-wlO" secondAttribute="centerY" id="wt4-4A-kjI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="A2j-x1-T5z" id="rqD-ua-Vpb"/>
+                                            <outlet property="categoryTitle" destination="AT7-sf-XZE" id="MRE-xF-rJI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gml-8G-UYt" id="71V-iX-RIb"/>
+                                    <outlet property="delegate" destination="Gml-8G-UYt" id="KuS-LB-ByH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VZj-QP-v3O"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RCt-1h-skp"/>
+                    <connections>
+                        <outlet property="tableview" destination="CzU-VJ-sa9" id="43A-vy-Aj1"/>
+                        <segue destination="V12-Fi-n1k" kind="push" id="6j4-sF-lFA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jS1-gP-dvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5" y="33.5"/>
+        </scene>
+        <!--Lucky Draw Result-->
+        <scene sceneID="esy-mx-agw">
+            <objects>
+                <viewController storyboardIdentifier="LuckyDrawResult" id="V12-Fi-n1k" customClass="LuckyDrawResult" customModule="LuckyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SPV-wh-eGp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-Ys-2sv">
+                                <rect key="frame" x="187.5" y="334" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQF-fJ-U5E">
+                                <rect key="frame" x="80" y="557" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXA-uR-0hV">
+                                <rect key="frame" x="240" y="557" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chance :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-m5-zoj">
+                                <rect key="frame" x="10" y="519" width="59" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NL0-Ol-YfZ" firstAttribute="bottom" secondItem="EXA-uR-0hV" secondAttribute="bottom" constant="80" id="H9c-YW-LdB"/>
+                            <constraint firstItem="iQF-fJ-U5E" firstAttribute="top" secondItem="U5E-m5-zoj" secondAttribute="bottom" constant="20" id="Je1-RH-xmq"/>
+                            <constraint firstItem="U5E-m5-zoj" firstAttribute="leading" secondItem="NL0-Ol-YfZ" secondAttribute="leading" constant="10" id="KoY-Oa-Ebj"/>
+                            <constraint firstItem="iQF-fJ-U5E" firstAttribute="leading" secondItem="NL0-Ol-YfZ" secondAttribute="leading" constant="80" id="L6V-Qw-mh7"/>
+                            <constraint firstItem="NL0-Ol-YfZ" firstAttribute="bottom" secondItem="iQF-fJ-U5E" secondAttribute="bottom" constant="80" id="eqS-qK-Y6P"/>
+                            <constraint firstItem="GG8-Ys-2sv" firstAttribute="centerY" secondItem="SPV-wh-eGp" secondAttribute="centerY" id="rGm-9k-dLR"/>
+                            <constraint firstItem="GG8-Ys-2sv" firstAttribute="centerX" secondItem="SPV-wh-eGp" secondAttribute="centerX" id="te5-LZ-HmG"/>
+                            <constraint firstItem="NL0-Ol-YfZ" firstAttribute="trailing" secondItem="EXA-uR-0hV" secondAttribute="trailing" constant="80" id="yOk-AI-EH4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NL0-Ol-YfZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fbs-vq-RhQ"/>
+                    <connections>
+                        <outlet property="chance" destination="U5E-m5-zoj" id="hXx-nA-foa"/>
+                        <outlet property="confirm" destination="EXA-uR-0hV" id="110-Sa-RD8"/>
+                        <outlet property="reset" destination="iQF-fJ-U5E" id="9KK-kF-9Sj"/>
+                        <outlet property="showmessage" destination="GG8-Ys-2sv" id="QIV-aI-KDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9VN-5E-kFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.5999999999999" y="32.833583208395808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rxn-a4-uNV">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="HG4-aZ-biO" customClass="NavigationController" customModule="LuckyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ti1-Kw-eLH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gml-8G-UYt" kind="relationship" relationship="rootViewController" id="7rG-fR-fHT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4e-M9-dx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="-748"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fastfood" width="50" height="50"/>
+        <image name="luckyEat_bg5" width="341" height="660"/>
+        <image name="noodle" width="50" height="50"/>
+        <image name="rice" width="50" height="50"/>
+    </resources>
+</document>
