@@ -55,50 +55,47 @@ class LuckyDrawResult: UIViewController {
         
         confirm.addTarget(self, action: #selector(LuckyDrawResult.handleConfirmButton), for: UIControlEvents.touchDown)
         
-//        let date = Date()
-//        let calendar = Calendar.current
-//        let year = calendar.component(.year, from: date)
-//        let month = calendar.component(.month, from: date)
-//        let day = calendar.component(.day, from: date)
+        let date = Date()
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
         
         
         if let navigationController = self.navigationController {
             navigation = navigationController as! NavigationController
-            self.resetChance = navigation.resetChance
-            self.timeperiod = navigation.timeperiod
-            self.confirmed = navigation.confirmed
             self.dict = navigation.dictCopy!
             
 //        //handle period
-//        if(userDefaults.object(forKey: "timestamp") == nil){
-//            resetChance = 3
-//            confirmed = false
+        if(userDefaults.string(forKey: "timestamp") == nil){
+            resetChance = 3
+            confirmed = false
             chance.text = "chance : \(String(resetChance))"
-//            userDefaults.set(resetChance, forKey: "chance")
-//            userDefaults.set("\(String(year))\(String(month))\(String(day)))", forKey: "timestamp")
-//            userDefaults.set(confirmed, forKey: "confirmed")
-//            print("restCahcne = \(resetChance)")
-//            userDefaults.synchronize()
-//        }else{
-//            if((userDefaults.string(forKey: "timestamp") == "\(String(year))\(String(month))\(String(day))")){
-//                chance.text = "chance : \(userDefaults.integer(forKey: "chance"))"
-//                resetChance = userDefaults.integer(forKey: "chance")
-//                confirmed = userDefaults.bool(forKey: "confirmed")
-//            }else{
-//                resetChance = 3
-//                confirmed = false
-//                chance.text = "chance : \(resetChance)"
-//                userDefaults.set(resetChance, forKey: "chance")
-//                userDefaults.set("\(String(year))\(String(month))\(String(day))", forKey: "timestamp")
-//                userDefaults.set(confirmed, forKey: "confirmed")
-//                for i in 0...navigation.eatTyperList.count-1{
-//                    userDefaults.removeObject(forKey: "\(navigation.eatTyperList[i])"+"Value")
-//                }
-//                userDefaults.removeObject(forKey: "tempValue")
-//                userDefaults.removeObject(forKey: "tempResult")
-//                userDefaults.synchronize()
-//            }
-//        }
+            userDefaults.set(resetChance, forKey: "chance")
+            userDefaults.set("\(String(year))\(String(month))\(String(day))", forKey: "timestamp")
+            userDefaults.set(confirmed, forKey: "confirmed")
+            print("restCahcne = \(resetChance)")
+            userDefaults.synchronize()
+        }else{
+            if(userDefaults.string(forKey: "timestamp") == "\(String(year))\(String(month))\(String(day))"){
+                chance.text = "chance : \(userDefaults.integer(forKey: "chance"))"
+                resetChance = userDefaults.integer(forKey: "chance")
+                confirmed = userDefaults.bool(forKey: "confirmed")
+            }else{
+                resetChance = 3
+                confirmed = false
+                chance.text = "chance : \(String(resetChance))"
+                userDefaults.set(resetChance, forKey: "chance")
+                userDefaults.set("\(String(year))\(String(month))\(String(day))", forKey: "timestamp")
+                userDefaults.set(confirmed, forKey: "confirmed")
+                for i in 0...navigation.eatTyperList.count-1{
+                    userDefaults.removeObject(forKey: "\(navigation.eatTyperList[i])"+"Value")
+                }
+                userDefaults.removeObject(forKey: "tempValue")
+                userDefaults.removeObject(forKey: "tempResult")
+                userDefaults.synchronize()
+            }
+        }
         
             
 //            print("eatType: \(navigation.eatType)")
@@ -160,13 +157,14 @@ class LuckyDrawResult: UIViewController {
     
     @objc func handleRestButton(){
         if(userDefaults.integer(forKey: "chance")>0){
+            self.datastore.removeAll()
             random(navigation: navigation)
             resetChance? -= 1
             chance.text = "chance : \(String(resetChance))"
             showmessage.text = result
             userDefaults.set(resetChance, forKey: "chance")
+            userDefaults.synchronize()
         }
-        userDefaults.synchronize()
     }
     
      func random(navigation : NavigationController){

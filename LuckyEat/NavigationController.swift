@@ -45,50 +45,50 @@ class NavigationController: UINavigationController {
                 }
                 print(dictCopy as Any)
 //            }
-        }else{
+            }else{
                 let path = NSHomeDirectory() + "/Documents/resturant.plist"
                 print(path + "Not Found!")
             }
         }
         
-        let date = Date()
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
+//        let date = Date()
+//        let calendar = Calendar.current
+//        let year = calendar.component(.year, from: date)
+//        let month = calendar.component(.month, from: date)
+//        let day = calendar.component(.day, from: date)
         
         
         
         //handle period
-        if(userDefaults.object(forKey: "timestamp") == nil){
-            resetChance = 3
-            confirmed = false
-//            chance.text = "chance : \(resetChance)"
-            userDefaults.set(resetChance, forKey: "chance")
-            userDefaults.set("\(String(year))\(String(month))\(String(day)))", forKey: "timestamp")
-            userDefaults.set(confirmed, forKey: "confirmed")
-            print("restCahcne = \(resetChance)")
-            userDefaults.synchronize()
-        }else{
-            if((userDefaults.string(forKey: "timestamp") == "\(String(year))\(String(month))\(String(day))")){
-//                chance.text = "chance : \(userDefaults.integer(forKey: "chance"))"
-                resetChance = userDefaults.integer(forKey: "chance")
-                confirmed = userDefaults.bool(forKey: "confirmed")
-            }else{
-                resetChance = 3
-                confirmed = false
-//                chance.text = "chance : \(resetChance)"
-                userDefaults.set(resetChance, forKey: "chance")
-                userDefaults.set("\(String(year))\(String(month))\(String(day))", forKey: "timestamp")
-                userDefaults.set(confirmed, forKey: "confirmed")
-                for i in 0...eatTyperList.count-1{
-                    userDefaults.removeObject(forKey: "\(eatTyperList[i])"+"Value")
-                }
-                userDefaults.removeObject(forKey: "tempValue")
-                userDefaults.removeObject(forKey: "tempResult")
-                userDefaults.synchronize()
-            }
-        }
+//        if(userDefaults.object(forKey: "timestamp") == nil){
+//            resetChance = 3
+//            confirmed = false
+////            chance.text = "chance : \(resetChance)"
+//            userDefaults.set(resetChance, forKey: "chance")
+//            userDefaults.set("\(String(year))\(String(month))\(String(day)))", forKey: "timestamp")
+//            userDefaults.set(confirmed, forKey: "confirmed")
+//            print("restCahcne = \(resetChance)")
+//            userDefaults.synchronize()
+//        }else{
+//            if((userDefaults.string(forKey: "timestamp") == "\(String(year))\(String(month))\(String(day))")){
+////                chance.text = "chance : \(userDefaults.integer(forKey: "chance"))"
+//                resetChance = userDefaults.integer(forKey: "chance")
+//                confirmed = userDefaults.bool(forKey: "confirmed")
+//            }else{
+//                resetChance = 3
+//                confirmed = false
+////                chance.text = "chance : \(resetChance)"
+//                userDefaults.set(resetChance, forKey: "chance")
+//                userDefaults.set("\(String(year))\(String(month))\(String(day))", forKey: "timestamp")
+//                userDefaults.set(confirmed, forKey: "confirmed")
+//                for i in 0...eatTyperList.count-1{
+//                    userDefaults.removeObject(forKey: "\(eatTyperList[i])"+"Value")
+//                }
+//                userDefaults.removeObject(forKey: "tempValue")
+//                userDefaults.removeObject(forKey: "tempResult")
+//                userDefaults.synchronize()
+//            }
+//        }
         
         
         

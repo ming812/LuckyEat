@@ -21,6 +21,7 @@ class Category: UIViewController, UITableViewDataSource,UITableViewDelegate {
     var activityIndicatorView : NVActivityIndicatorView?
     var roundedBackgroundView : UIView!
     var isolateView : UIView!
+    var navigation : NavigationController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,6 +172,17 @@ class Category: UIViewController, UITableViewDataSource,UITableViewDelegate {
                         count += 1
                     }
                     print("dictionary result = \(self.dict as Any)")
+                   
+                    if let navigationController = self.navigationController {
+                        self.navigation = navigationController as! NavigationController
+                        self.navigation.dict = self.dict
+                        self.navigation.dictCopy?.removeAll()
+                            for(key,value) in self.dict!{
+                                let data = value as! Dictionary<String, String>
+                                self.navigation.dictCopy![data["name"] as! String] = data["style"] as! String
+                            }
+                        
+                    }
                     // Get value by key
                     //                    let firstNameValue = convertedJsonIntoDict["userName"] as? String
                     //                    print(firstNameValue!)
